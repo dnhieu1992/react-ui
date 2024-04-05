@@ -1,7 +1,7 @@
 {
-  "name": "@cmc/ui",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@react-library/components",
+  "version": "0.0.1",
+  "description": "Simple React components library",
   "main": "lib/index.js",
   "scripts": {
     "build": "rollup -c",
