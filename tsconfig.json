@@ -16,5 +16,10 @@
     "esModuleInterop": true
   },
   "include": ["src", "rollup.config.js", "global.d.ts"],
-  "exclude": ["node_modules", "lib"]
+  "exclude": [
+    "node_modules",
+    "lib",
+    "src/**/*.stories.tsx",
+    "src/**/*.test.tsx"
+  ]
 }

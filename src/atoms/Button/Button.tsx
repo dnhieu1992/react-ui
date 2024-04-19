@@ -1,7 +1,7 @@
 import React from 'react'
-import styled, { useTheme } from 'styled-components'
+import styled from 'styled-components'
 
-type ButtonProps = {
+export type ButtonProps = {
   backgroundColor?: string
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
