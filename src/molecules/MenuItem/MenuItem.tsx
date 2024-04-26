@@ -9,9 +9,7 @@ export type MenuItemProps = {
   component?: React.ComponentType<any>
 } & React.HTMLAttributes<HTMLDivElement>
 
-type MenuItemStyledProps = Pick<MenuItemProps, 'sx'>
-
-const StyledMenuItem = styled.div<MenuItemStyledProps>`
+const StyledMenuItem = styled.div<Pick<MenuItemProps, 'sx'>>`
   display: flex;
   align-items: center;
   gap: 8px;

@@ -4,8 +4,9 @@ import { BsReverseLayoutSidebarReverse } from 'react-icons/bs'
 
 export type SidebarProps = {
   showToggleButton?: boolean
-  toggleButton: React.ReactNode
-} & React.HTMLAttributes<HTMLDivElement>
+  toggleButton?: React.ReactNode
+  sx?: Record<string, any>
+} & React.HTMLAttributes<HTMLElement>
 
 const ToggleButton = styled.div`
   width: 50px;
@@ -19,13 +20,21 @@ const ToggleButton = styled.div`
     background-color: #f0f0f0;
   }
 `
+type StyledSidebarProps = Pick<SidebarProps, 'sx'>
+const StyledSidebar = styled.aside<StyledSidebarProps>`
+  background-color: #fff;
+  height: 100vh;
+  ${({ sx }) => sx}
+`
 
 const Sidebar: React.FC<SidebarProps> = ({
   showToggleButton,
   toggleButton,
+  sx,
+  ...rest
 }: SidebarProps) => {
   return (
-    <div>
+    <StyledSidebar sx={sx} {...rest}>
       {showToggleButton && (
         <div>
           {toggleButton ? (
@@ -37,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           )}
         </div>
       )}
-    </div>
+    </StyledSidebar>
   )
 }
 

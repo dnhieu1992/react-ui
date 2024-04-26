@@ -4,13 +4,11 @@ import styled, { css } from 'styled-components'
 export type SubMenuProps = {
   children: React.ReactNode
   title: string
-  icon: React.ReactNode | JSX.Element
+  icon?: React.ReactNode | JSX.Element
   sx?: Record<string, any>
 } & React.HTMLAttributes<HTMLDivElement>
 
-type StyledSubMenuProps = Pick<SubMenuProps, 'sx'>
-
-const StyledSubMenu = styled.div<StyledSubMenuProps>`
+const StyledSubMenu = styled.div<Pick<SubMenuProps, 'sx'>>`
   display: flex;
   flex-direction: column;
   padding: 8px 16px;
@@ -38,7 +36,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
   return (
     <StyledSubMenu sx={sx} {...rest}>
       <StyledSubMenuTitle>
-        {icon}
+        {icon && icon}
         <span className="sub-menu-title">{title}</span>
       </StyledSubMenuTitle>
       {children}
