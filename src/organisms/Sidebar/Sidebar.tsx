@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { BsReverseLayoutSidebarReverse } from 'react-icons/bs'
 
 export type SidebarProps = {
+  children: React.ReactNode
   showToggleButton?: boolean
   toggleButton?: React.ReactNode
   sx?: Record<string, any>
@@ -30,6 +31,7 @@ const StyledSidebar = styled.aside<StyledSidebarProps>`
 const Sidebar: React.FC<SidebarProps> = ({
   showToggleButton,
   toggleButton,
+  children,
   sx,
   ...rest
 }: SidebarProps) => {
@@ -46,6 +48,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           )}
         </div>
       )}
+      {children}
     </StyledSidebar>
   )
 }

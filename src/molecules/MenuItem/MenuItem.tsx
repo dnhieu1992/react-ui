@@ -36,9 +36,9 @@ const MenuItem: React.FC<MenuItemProps> = ({
   return (
     <StyledMenuItem sx={sx} {...rest}>
       <Component className="menu-item-content">
-        <span>{startIcon}</span>
+        {startIcon && <span>{startIcon}</span>}
         <span>{children}</span>
-        <span>{endIcon}</span>
+        {endIcon && <span>{endIcon}</span>}
       </Component>
     </StyledMenuItem>
   )
