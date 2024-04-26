@@ -6,5 +6,5 @@ test('renders button and responds to click events', () => {
   render(<Button>Click me</Button>)
 
   const buttonElement = screen.getByText(/Click me/i)
-  expect(buttonElement).toBeInTheDocument()
+  expect(buttonElement).toBeInTheDocument() // Use the toBeInTheDocument matcher
 })
