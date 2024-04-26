@@ -6,7 +6,7 @@ export type MenuItemProps = {
   sx?: Record<string, any>
   startIcon?: React.ReactNode
   endIcon?: React.ReactNode
-  component?: React.JSX.ElementType
+  component?: React.ComponentType<any>
 } & React.HTMLAttributes<HTMLDivElement>
 
 type MenuItemStyledProps = Pick<MenuItemProps, 'sx'>
