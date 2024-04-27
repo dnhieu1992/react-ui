@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Menu from './Menu'
+import MenuItem from '../MenuItem/MenuItem'
 
 export default {
   title: 'Components/Menu',
@@ -12,7 +13,7 @@ const Template = (args) => <Menu {...args} />
 
 export const Default = Template.bind({})
 Default.args = {
-  children: <div>Test Menu</div>,
+  children: <MenuItem>Home</MenuItem>,
 }
 
 export const WithBackgroundColor = Template.bind({})

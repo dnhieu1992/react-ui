@@ -34,10 +34,10 @@ const MenuItem: React.FC<MenuItemProps> = ({
 }: MenuItemProps) => {
   return (
     <StyledMenuItem sx={sx} {...rest}>
-      {component}
-      {startIcon && <span>{startIcon}</span>}
+      {component && component}
+      {startIcon && startIcon}
       <span>{children}</span>
-      {endIcon && <span>{endIcon}</span>}
+      {endIcon && endIcon}
     </StyledMenuItem>
   )
 }
