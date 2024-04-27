@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './Menu'
-import { render } from '@testing-library/react'
 import MenuItem from '../MenuItem/MenuItem'
+import { render } from '@testing-library/react'
 
 test('renders Menu component', () => {
   const { getByText } = render(
@@ -31,8 +31,8 @@ test('applies styles from sx prop', () => {
 test('renders multiple children', () => {
   const { getByText } = render(
     <Menu>
-      <MenuItem>Child 1</MenuItem>
-      <MenuItem>Child 2</MenuItem>
+      <div>Child 1</div>
+      <div>Child 2</div>
     </Menu>
   )
   expect(getByText('Child 1')).toBeInTheDocument()

@@ -10,11 +10,10 @@ export type MenuProps = {
 
 const StyledMenu = styled.div<MenuProps>`
   background-color: #fff;
-  height: 100vh;
-  position: fixed;
-  left: 0;
   width: 100%;
-  padding: 8px 16px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  box-sizing: border-box;
   ${({ sx }) => sx && css(sx)};
 `
 
