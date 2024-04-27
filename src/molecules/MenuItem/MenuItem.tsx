@@ -6,7 +6,7 @@ export type MenuItemProps = {
   sx?: Record<string, any>
   startIcon?: React.ReactNode
   endIcon?: React.ReactNode
-  component?: React.ComponentType<any>
+  component?: React.ReactNode
 } & React.HTMLAttributes<HTMLDivElement>
 
 const StyledMenuItem = styled.div<Pick<MenuItemProps, 'sx'>>`
@@ -32,14 +32,12 @@ const MenuItem: React.FC<MenuItemProps> = ({
   endIcon,
   ...rest
 }: MenuItemProps) => {
-  const Component = component || 'a'
   return (
     <StyledMenuItem sx={sx} {...rest}>
-      <Component className="menu-item-content">
-        {startIcon && <span>{startIcon}</span>}
-        <span>{children}</span>
-        {endIcon && <span>{endIcon}</span>}
-      </Component>
+      {component}
+      {startIcon && <span>{startIcon}</span>}
+      <span>{children}</span>
+      {endIcon && <span>{endIcon}</span>}
     </StyledMenuItem>
   )
 }

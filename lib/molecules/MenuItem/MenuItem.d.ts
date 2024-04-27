@@ -4,7 +4,7 @@ export type MenuItemProps = {
     sx?: Record<string, any>;
     startIcon?: React.ReactNode;
     endIcon?: React.ReactNode;
-    component?: React.ComponentType<any>;
+    component?: React.ReactNode;
 } & React.HTMLAttributes<HTMLDivElement>;
 declare const MenuItem: React.FC<MenuItemProps>;
 export default MenuItem;
