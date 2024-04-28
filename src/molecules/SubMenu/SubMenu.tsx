@@ -15,7 +15,7 @@ const StyledSubMenu = styled.div<Pick<SubMenuProps, 'sx'>>`
   gap: 8px;
   font-size: 14px;
   font-weight: 600;
-  font-family: 'inherit';
+  font-family: inherit;
   color: rgb(0, 0, 0);
   box-sizing: border-box;
   margin-bottom: 8px;

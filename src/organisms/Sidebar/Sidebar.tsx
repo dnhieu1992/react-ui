@@ -28,7 +28,7 @@ const StyledSidebar = styled.aside<StyledSidebarProps>`
   height: 100vh;
   height: 100%;
   box-sizing: border-box;
-  font-family: 'inherit';
+  font-family: inherit;
   color: #000;
   padding: 0 10px;
   box-shadow: 0 3px 13px 0 rgba(18, 43, 70, 0.1);

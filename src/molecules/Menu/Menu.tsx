@@ -14,6 +14,7 @@ const StyledMenu = styled.div<MenuProps>`
   background-color: #ffffff;
   margin-top: 20px;
   box-sizing: border-box;
+  font-family: inherit;
   ${({ sx }) => sx && css(sx)};
 `
 

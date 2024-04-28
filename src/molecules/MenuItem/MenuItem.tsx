@@ -19,7 +19,7 @@ const StyledMenuItem = styled.div<Pick<MenuItemProps, 'sx'>>`
   width: 100%;
   cursor: pointer;
   font-size: 14px;
-  font-family: 'inherit';
+  font-family: inherit;
   font-weight: 400;
   text-transform: capitalize;
   box-sizing: border-box;
