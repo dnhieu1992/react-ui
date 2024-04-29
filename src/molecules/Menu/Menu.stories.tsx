@@ -5,7 +5,7 @@ import Menu from './Menu'
 import MenuItem from '../MenuItem/MenuItem'
 
 export default {
-  title: 'Components/Menu',
+  title: 'Molecules/Menu',
   component: Menu,
 }
 

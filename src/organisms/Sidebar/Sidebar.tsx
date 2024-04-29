@@ -50,11 +50,11 @@ const Sidebar: React.FC<SidebarProps> = ({
     <ToggleContext.Provider value={toggle}>
       <StyledSidebar toggle={toggle.toString()} sx={sx} {...rest}>
         {showToggleButton && (
-          <div onClick={() => setToggle(!toggle)}>
+          <div onClick={() => setToggle(!toggle)} id="toggleBtnContainer">
             {toggleButton ? (
               toggleButton
             ) : (
-              <ToggleButton>
+              <ToggleButton id="defaultToggleButton">
                 <BsReverseLayoutSidebarReverse />
               </ToggleButton>
             )}

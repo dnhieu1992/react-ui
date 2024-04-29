@@ -1,26 +1,27 @@
-// Button.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react'
+import Button from './Button'
 
-import React from 'react';
-import { StoryFn, Meta } from '@storybook/react';
-import Button, { ButtonProps } from './Button';
-
-export default {
-  title: 'Components/Button',
+const meta: Meta<typeof Button> = {
+  title: 'Atoms/Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as Meta;
+}
 
-const Template: StoryFn<ButtonProps> = (args) => <Button {...args}>Button</Button>;
+export default meta
+type Story = StoryObj<typeof Button>
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: 'Button',
-};
+export const Primary: Story = {
+  args: {
+    primary: true,
+    label: 'Button',
+  },
+}
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+export const Secondary: Story = {
+  args: {
+    ...Primary.args,
+    primary: false,
+  },
+}

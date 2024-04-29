@@ -19,15 +19,6 @@ test('applies styles from sx prop', () => {
   expect(getByText('Test Menu')).toHaveStyle('background-color: blue')
 })
 
-// test('overrides default styles with sx prop', () => {
-//   const { getByText } = render(
-//     <Menu sx={{ height: '50vh' }}>
-//       <div>Test Menu</div>
-//     </Menu>
-//   )
-//   expect(getByText('Test Menu')).toHaveStyle('height: 50vh')
-// })
-
 test('renders multiple children', () => {
   const { getByText } = render(
     <Menu>
@@ -38,12 +29,3 @@ test('renders multiple children', () => {
   expect(getByText('Child 1')).toBeInTheDocument()
   expect(getByText('Child 2')).toBeInTheDocument()
 })
-
-// test('custom toggle button', () => {
-//   const { getByText } = render(
-//     <Menu toggleButton={<div>Toggle Button</div>}>
-//       <div>Test Menu</div>
-//     </Menu>
-//   )
-//   expect(getByText('Toggle Button')).toBeInTheDocument()
-// })

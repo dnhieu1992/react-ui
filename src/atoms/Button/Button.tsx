@@ -3,6 +3,8 @@ import styled from 'styled-components'
 
 export type ButtonProps = {
   backgroundColor?: string
+  primary?: boolean
+  label?: string
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
 const StyledButton = styled.button<ButtonProps>``
@@ -19,4 +21,4 @@ const Button: React.FC<ButtonProps> = ({
   )
 }
 
-export default React.memo(Button)
+export default Button

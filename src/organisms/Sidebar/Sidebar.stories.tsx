@@ -10,8 +10,11 @@ import { VscCommentDiscussion } from 'react-icons/vsc'
 import { FaUserGroup } from 'react-icons/fa6'
 
 export default {
-  title: 'Components/Sidebar',
+  title: 'Organisms/Sidebar',
   component: Sidebar,
+  argTypes: {
+    backgroundColor: { control: 'color' },
+  },
 }
 
 const Template = (args) => <Sidebar {...args} />

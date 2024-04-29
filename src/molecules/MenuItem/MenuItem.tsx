@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import ToggleContext from '../../contexts/ToggleContext'
 
 export type MenuItemProps = {
@@ -7,8 +7,16 @@ export type MenuItemProps = {
   sx?: Record<string, any>
   startIcon?: React.ReactNode
   endIcon?: React.ReactNode
-  component?: React.ReactNode
 } & React.HTMLAttributes<HTMLDivElement>
+
+const marquee = keyframes`
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+`
 
 const StyledMenuItem = styled.div<Pick<MenuItemProps, 'sx'>>`
   display: flex;
@@ -34,14 +42,12 @@ const MenuItem: React.FC<MenuItemProps> = ({
   children,
   sx,
   startIcon,
-  component,
   endIcon,
   ...rest
 }: MenuItemProps) => {
   const toggle = useContext(ToggleContext) || false
   return (
     <StyledMenuItem sx={sx} {...rest}>
-      {!toggle && component && component}
       {startIcon && startIcon}
       {!toggle && children}
       {!toggle && endIcon && endIcon}
