@@ -1,4 +1,5 @@
-export declare const defaultTheme: {
+/// <reference types="react" />
+declare const ThemeContext: import("react").Context<{
     palette: {
         type: string;
         common: {
@@ -84,4 +85,5 @@ export declare const defaultTheme: {
             activatedOpacity: number;
         };
     };
-};
+}>;
+export default ThemeContext;
